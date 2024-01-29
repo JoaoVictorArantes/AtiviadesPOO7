@@ -13,16 +13,14 @@ namespace AtiviadesPOO7
         public String NomeTitular { get; set; }
         public double Saldo { get; private set; }
 
-        public ContaBancaria(int numero, String NomeTitular)
+        public ContaBancaria(int Numero, String NomeTitular)
         {
-            this.Numero = numero;
+            this.Numero = Numero;
             this.NomeTitular = NomeTitular;
         }
-        public ContaBancaria(int numero, String NomeTitular, Double Saldo)
+        public ContaBancaria(int Numero, String NomeTitular, Double Saldo) : this( Numero , NomeTitular )
         {
-            this.Numero = numero;
-            this.NomeTitular = NomeTitular;
-            this.Saldo = Saldo;
+            Deposito(Saldo);
         }
 
         public void Deposito(double valor)
